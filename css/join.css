@@ -1,0 +1,171 @@
+/* 기본 리셋 및 폰트 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+    background-color: #777;
+    color: white;
+}
+
+header {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+nav a {
+    color: white;
+    margin-left: 1.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 2rem 2.5rem;
+    border-radius: 8px;
+    width: 360px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+form h2 {
+    margin-bottom: 0.6rem;
+    font-weight: 700;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+form p.subtitle {
+    text-align: center;
+    margin-bottom: 1.8rem;
+    font-weight: 300;
+    font-size: 1rem;
+    color: #ccc;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+label {
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+    display: block;
+    font-weight: 600;
+}
+
+.gender-group,
+.checkbox-group {
+    margin-bottom: 1rem;
+}
+
+.gender-group label,
+.checkbox-group label {
+    font-weight: normal;
+    font-size: 0.9rem;
+    margin-right: 10px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 6px;
+}
+
+button {
+    width: 100%;
+    background-color: #1abc9c;
+    border: none;
+    padding: 0.8rem 0;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #17a589;
+}
+
+#footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+
+
+
+
+
+
+
+.select-group {
+    display: flex;
+    border: 1px solid #888;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.select-group button {
+    flex: 1;
+    padding: 10px 0;
+    border: none;
+    background: transparent;
+    color: #ccc;
+    border-right: 1px solid #888;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 1rem;
+}
+
+.select-group button:last-child {
+    border-right: none;
+}
+
+.select-group button.active {
+    color: #1abc9c;
+    border: 1px solid #1abc9c;
+    background-color: rgba(26, 188, 156, 0.1);
+    font-weight: bold;
+}

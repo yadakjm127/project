@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>오늘 뭐 먹지?</title>
+    <link rel="stylesheet" href="/css/food.css" />
+</head>
+
+<body>
+    <main>
+        <section id="timeBasedRecommendation">
+            <h2>지금 시간에 어울리는 메뉴</h2>
+            <p id="timeFood">추천 메뉴를 불러오는 중...</p>
+        </section>
+
+        <section id="categoryBasedRecommendation">
+            <h2>원하는 메뉴 카테고리 선택</h2>
+            <select id="categorySelect">
+                <option value="">-- 카테고리를 선택하세요 --</option>
+                <option value="한식">한식</option>
+                <option value="중식">중식</option>
+                <option value="일식">일식</option>
+                <option value="양식">양식</option>
+                <option value="분식">분식</option>
+                <option value="야식">야식</option>
+            </select>
+            <div id="recommendationArea">
+                <p>추천 메뉴가 여기 표시됩니다.</p>
+            </div>
+            <button id="rerollBtn" style="display:none;">다시 고르기</button>
+        </section>
+    </main>
+    <section id="reviewSection">
+        <h2>5. 유저 리뷰 & 평점 남기기</h2>
+
+        <form id="reviewForm">
+            <input type="text" id="nickname" placeholder="닉네임" required />
+            <textarea id="reviewText" placeholder="리뷰를 작성해 주세요." rows="4" required></textarea>
+
+            <div id="rating">
+                <label>평점: </label>
+                <select id="starRating" required>
+                    <option value="">선택</option>
+                    <option value="1">★☆☆☆☆ (1점)</option>
+                    <option value="2">★★☆☆☆ (2점)</option>
+                    <option value="3">★★★☆☆ (3점)</option>
+                    <option value="4">★★★★☆ (4점)</option>
+                    <option value="5">★★★★★ (5점)</option>
+                </select>
+            </div>
+
+            <button type="submit">리뷰 남기기</button>
+        </form>
+
+        <ul id="reviewList"></ul>
+    </section>
+
+    <script src="/js/food.js"></script>
+</body>
+
+</html>
