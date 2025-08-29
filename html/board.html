@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>자유게시판 | 오늘은 뭐먹지?</title>
+    <link rel="stylesheet" href="../css/board.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container">
+        <!-- 상단 네비게이션 -->
+        <header class="top-nav">
+            <div class="logo">🍽 오늘은 뭐먹지?</div>
+            <nav>
+                <a href="../index.html">홈</a>
+                <a href="./login.html">로그인</a>
+                <a href="./join.html">회원가입</a>
+                <a href="./board.html" class="active">게시판</a>
+            </nav>
+        </header>
+
+        <!-- 게시판 콘텐츠 -->
+        <main class="main-content">
+            <div class="board-container">
+                <h2>자유게시판</h2>
+
+                <!-- 글쓰기 폼 -->
+                <form class="board-form">
+                    <label for="title">제목</label>
+                    <input type="text" id="title" name="title" placeholder="제목을 입력하세요" />
+
+                    <label for="content">내용</label>
+                    <textarea id="content" name="content" rows="6" placeholder="내용을 입력하세요"></textarea>
+
+                    <label for="writer">작성자</label>
+                    <input type="text" id="writer" name="writer" placeholder="작성자 이름을 입력하세요" />
+
+                    <div class="btn-group">
+                        <button type="submit" class="btn submit-btn">저장</button>
+                        <button type="reset" class="btn">취소</button>
+                    </div>
+                </form>
+
+                <!-- 게시글 목록 테이블 -->
+                <table class="board-table">
+                    <thead>
+                        <tr>
+                            <th>번호</th>
+                            <th>제목</th>
+                            <th>내용</th>
+                            <th>작성자</th>
+                            <th>작성일</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- 샘플 데이터 -->
+                        <tr>
+                            <td>1</td>
+                            <td><a href="#">오늘 점심 뭐 드셨나요?</a></td>
+                            <td>비빔밥이 맛있었어요~</td>
+                            <td>홍길동</td>
+                            <td>2025-08-29</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><a href="#">추천 맛집 공유!</a></td>
+                            <td>신촌에 있는 김치찌개집 좋아요!</td>
+                            <td>김철수</td>
+                            <td>2025-08-28</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- 댓글 섹션 -->
+            <div class="comment-section">
+                <h3>댓글</h3>
+                <form class="comment-form">
+                    <input type="text" id="comment-writer" name="comment-writer" placeholder="이름" />
+                    <textarea id="comment-content" name="comment-content" rows="4" placeholder="댓글을 작성하세요"></textarea>
+
+                    <div id="rating">
+                        <label for="starRating">별점:</label>
+                        <select id="starRating" name="starRating">
+                            <option value="5">★★★★★ (5)</option>
+                            <option value="4">★★★★☆ (4)</option>
+                            <option value="3">★★★☆☆ (3)</option>
+                            <option value="2">★★☆☆☆ (2)</option>
+                            <option value="1">★☆☆☆☆ (1)</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" id="comment-submit">등록</button>
+                </form>
+
+                <ul id="comment-list">
+                    <li><strong>홍길동</strong>: 맛있겠네요~ 별점 ★★★★★</li>
+                    <li><strong>김영희</strong>: 다음에 가봐야겠어요! ★★★★☆</li>
+                </ul>
+            </div>
+        </main>
+
+        <!-- 푸터 -->
+        <footer id="footer">
+            <p>Copyright&copy; 오늘 뭐 먹지? What should we eat?</p>
+        </footer>
+    </div>
+</body>
+
+</html>

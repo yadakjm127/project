@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>로그인 | 오늘은 뭐먹지?</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="background">
+        <div class="overlay"></div>
+        <header class="top-nav">
+            <div class="logo">🍽 오늘은 뭐먹지?</div>
+            <nav>
+                <a href="../index.html">홈</a>
+                <a href="./login.html">로그인</a>
+                <a href="./join.html">회원가입</a>
+                <a href="./board.html">게시판</a>
+            </nav>
+        </header>
+
+        <main class="login-container">
+            <h2>로그인</h2>
+            <p class="subtitle">오늘 뭐 먹을지 고민 중이라면, 먼저 로그인부터!</p>
+
+            <form name="login" action="#" method="get" class="login-form">
+                <button type="button" class="google-btn">Google 계정으로 로그인</button>
+                <div class="divider">또는</div>
+
+                <input type="text" name="username" id="username" placeholder="아이디를 입력해주세요.">
+                <input type="password" name="password" id="password" placeholder="비밀번호를 입력하세요">
+                <input type="button" name="button" value="LOGIN" class="login-btn">
+                <a href="www.naver.com" class="forgot">비밀번호를 잊으셨나요?</a>
+            </form>
+        </main>
+    </div>
+
+    <script>
+        const btnEl = document.login.button;
+        btnEl.onclick = function () {
+            const userid = document.login.username;
+            const pwd = document.login.password;
+
+            if (userid.value == "") {
+                alert("아이디를 입력해주세요.");
+                userid.focus();
+                return;
+            }
+            if (pwd.value == "") {
+                alert("비밀번호를 입력해주세요.");
+                pwd.focus();
+                return;
+            }
+            if (pwd.value.length < 5) {
+                alert("비밀번호는 5자리 이상 입력해 주세요.");
+                pwd.focus();
+                return;
+            }
+            if (checkChar(pwd.value) < 1) {
+                alert("영문자를 1자 이상 입력해 주세요.");
+                pwd.focus();
+                return;
+            }
+
+            document.login.submit();
+        }
+
+        function checkChar(password) {
+            let cnt = 0;
+            for (let i = 0; i < password.length; i++) {
+                if ((password.charAt(i) >= 'A' && password.charAt(i) <= 'Z') ||
+                    (password.charAt(i) >= 'a' && password.charAt(i) <= 'z')) {
+                    cnt++;
+                }
+            }
+            return cnt;
+        }
+    </script>
+</body>
+<div id="footer">
+        <p>Copyright&copy; 오늘 뭐 먹지? What should we eat? </p>
+    </div>
+</html>
